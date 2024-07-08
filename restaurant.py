@@ -1,16 +1,16 @@
-class Node():
+class Order():
     def __init__(self, meals, table):
         self.meals = meals
         self.table = table
         self.next = None
 
-class Orders():
+class Kitchen():
     def __init__(self):
         self.head = None
         self.tail = None
 
     def add_order(self, meals, table):
-        new_order = Node(meals, table)
+        new_order = Order(meals, table)
         meals = [meals]
         if self.head == None:   # If list is empty, this new order shall be everything
             self.head = new_order
@@ -59,7 +59,7 @@ class Orders():
 
     
 
-orders = Orders()
+orders = Kitchen()
 orders.add_order(["Pasta", "Breadsticks"], 1)
 orders.add_order("Pizza", 2)
 orders.add_order("Salad", 3)
